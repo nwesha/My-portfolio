@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Amatic+SC:wght@400;700&family=Kalam:wght@300;400;700&family=Luckiest+Guy&family=Playwrite+AU+VIC:wght@100..400&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6cbb0851b3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="container">
+    <!-- Landing Page -->
+    <section id="landing">
+        <div class="intro">
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
+            <h1>Welcome to My Portfolio</h1>
+            <p class="large">Hello! I'm Anwesha.</p>
+            <p class="small">I've been exploring the exciting world of web
+                technologies and building creative, user-friendly websites.
+                <br>Feel free to explore my projects and learn more about me.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <img src="project1.png" alt="Project 1">
+                <h3>Catletics</h3>
+                <p>This is a gym website (in a feline world).</p>
+                <a href="https://nwesha.github.io/Catletics-website/">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="project2.png" alt="Project 2">
+                <h3>The News Hive</h3>
+                <p>This is a static news website.</p>
+                <a href="https://nwesha.github.io/ccwebD/">View Project</a>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="box">
+        <p class="para">I am a <strong>sophomore</strong> majoring in <strong>Chemical Engineering</strong> at
+            <strong>IIT Guwahati</strong>, passionate about merging engineering with technology and innovation.</p>
+        <p class="para"> My skills include HTML, CSS, JavaScript, and proficiency in C and C++. Currently exploring
+            Django, React.js, and Node.js to expand my backend and frontend capabilities.
+            Beyond technical skills, I am interested in robotics, IoT, finance, and data science. I thrive
+            in management and team leadership roles, ensuring efficient project execution.</p>
+        <p class="para">Outside of technology, I have a passion for travel, exploring new locations whenever possible. I
+            am dedicated to continuous learning and excited about opportunities that allow me to combine my engineering
+            background with my passion for technology and innovation.</p>
+            </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/anwesha-7102122a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank" class="linkedin" title="Connect on LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
