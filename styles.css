@@ -198,9 +198,14 @@ a {
 
 .social-icons a.linkedin {
     color: #014598;
-    font-size: 30px;
+    font-size: 50px;
+    padding-right: 20px ;
 }
 
+.social-icons a.github {
+    color: #000000;
+    font-size: 50px;
+}
 .social-icons p {
     display: inline-block;
     /* Ensures text is inline with icon */
