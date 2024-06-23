@@ -1,5 +1,3 @@
-// scripts.js
-
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -19,7 +17,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     
     alert('Form submitted successfully!');
     document.getElementById('contactForm').reset();
-    // Here you can add your code to handle the form submission, e.g., sending data to a server
+    // Code to handle the form submission and send to a server to be inputted here 
 });
 
 function validateEmail(email) {
