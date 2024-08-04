@@ -1,0 +1,375 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevents normal scrolling */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    scroll-snap-align: start; /* Enables snap effect */
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll; /* Enables vertical scrolling */
+    scroll-snap-type: y mandatory; /* Enables vertical snap effect */
+}
+
+
+h1 {
+    font-size: 65px;
+    color: white;
+    font-family: "Playwrite AU VIC", cursive;
+    font-optical-sizing: auto;
+
+    font-style: normal;
+    text-shadow: 0 0 10px rgba(213, 212, 212, 0.7),
+                 0 0 20px rgba(213, 212, 212, 0.7),
+                 0 0 30px rgba(213, 212, 212, 0.7),
+                 0 0 40px rgba(255, 0, 0, 0.7),
+                 0 0 70px rgba(255, 0, 0, 0.7),
+                 0 0 80px rgba(255, 0, 0, 0.7),
+                 0 0 100px rgba(255, 0, 0, 0.7),
+                 0 0 150px rgba(255, 0, 0, 0.7);
+}
+
+.large {
+    font-size: 35px;
+    /* font-family: "Kalam", cursive;
+    font-weight: 500;
+    font-style: normal; */
+    font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 15px;
+  color: rgb(224, 196, 185);
+}
+
+.small {
+    font-size: 24px;
+    padding: 0;
+    font-family: "Kalam", cursive;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    color: rgb(175, 151, 151);
+}
+
+h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: 65px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), /* Soft shadow */
+    3px 3px 8px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
+}
+
+#landing {
+    background: linear-gradient(to right, #370202e2, #8e3232cf, #370202e2), linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    background-blend-mode: screen;
+    
+}
+
+.avatar {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.313);
+}
+
+#projects,
+#about,
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+
+#about {
+    padding-left: 120px;
+    padding-right: 120px;
+    background: linear-gradient(to left, #297f79d6, #317540d1, #717a26d6);
+    background-blend-mode: multiply;
+}
+
+#about p {
+    margin-bottom: 10px;
+}
+
+.box{
+    border: 2px solid darkolivegreen;
+    padding: 30px;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.para {
+    color: rgb(46, 46, 46);
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-family: "Acme", sans-serif;
+    font-style: normal;
+    margin: 0;
+}
+
+#contact{
+    background: linear-gradient(to left, rgba(74, 24, 114, 0.781), rgba(110, 22, 50, 0.822)), linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    padding-bottom: 150px;
+    background-blend-mode: screen;
+}
+
+
+
+#projects {
+    background-blend-mode: multiply;
+    background: linear-gradient(to left, #013771d1, #157670d6);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project-cards-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 67%;
+    padding-bottom: 20px; /* Space for scrollbar */
+}
+
+.project-cards {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0 0;
+}
+
+.project-card {
+    flex: 0 0 auto;
+    width: 300px;
+    background: rgb(30, 30, 30);
+    border: 1px solid #373737;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+/* Scrollbar styles */
+.project-cards-container::-webkit-scrollbar {
+    height: 12px;
+}
+
+.project-cards-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.project-cards-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.project-cards-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    color: #8cc3ff;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.project-card p {
+    color: white;
+    font-size: 13px;
+}
+
+a {
+    color: rgb(184, 113, 205);
+    font-size: 12px;
+}
+
+.social-icons {
+    margin-top: 50px;
+}
+
+.social-icons a.linkedin {
+    color: #014598;
+    font-size: 50px;
+    padding-right: 20px ;
+}
+
+.social-icons a.github {
+    color: #000000;
+    font-size: 50px;
+}
+
+.social-icons p {
+    display: inline-block;
+    /* Ensures text is inline with icon */
+    vertical-align: middle;
+    /* Aligns text vertically with icon */
+    font-size: 18px;
+    /* Adjust text size */
+    color: #333;
+    /* Text color */
+}
+
+form {
+    max-width: 600px;
+    width:40%;
+    margin: 0 auto;
+    text-align: left;
+    background: rgb(30, 30, 30);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e66bfe;
+}
+
+form input,
+form textarea {
+    background-color: rgba(94, 94, 94, 0.712);
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #630067;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #630067;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background: #8d0268;
+}
+
+@media (max-width: 768px) {
+    .project-cards {
+        flex-direction: row;
+        align-items: center;
+        margin:0;
+    }
+
+    #landing {
+        padding: 50px 10px;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 10px 0;
+        padding:15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+    #about {
+        padding: 30px 10px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .para {
+        font-size: 18px;
+    }
+    form input,
+form textarea{
+    width:90%;
+}
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 35px;
+    }
+    
+    h2 {
+        font-size: 25px;
+    }
+    
+    .large {
+        font-size: 20px;
+    }
+    
+    .small {
+        font-size: 16px;
+    }
+    
+    .project-card {
+        padding: 15px;
+    }
+
+    #about {
+        padding: 20px 10px;
+    }
+
+    .box {
+        padding: 15px;
+    }
+
+    .para {
+        font-size: 16px;
+    }
+
+    .social-icons {
+        margin-top: 0;
+    }
+
+    .social-icons i {
+        font-size: 20px;
+    }
+
+    .social-icons a{
+        margin: 0;
+    }
+
+}
