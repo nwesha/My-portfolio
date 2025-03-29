@@ -1,11 +1,11 @@
 // scripts.js
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById('contactForm').addEventListener('submit', async function(event) {
     event.preventDefault();
     
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
     
     if(name === '' || email === '' || message === '') {
         alert('All fields are required.');
@@ -16,10 +16,27 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         alert('Please enter a valid email address.');
         return;
     }
+
+    let formData = new FormData(this);
+    try{
+        let response = await fetch(this.action, {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+        if (response.ok) {
+            alert('Form submitted successfully!');
+            this.reset();
+        } else {
+            alert('Something went wrong. Please try again.');
+        }
+    } catch (error) {
+        alert('Network error. Please check your connection and try again.');
+    }
+
     
-    alert('Form submitted successfully!');
-    document.getElementById('contactForm').reset();
-    // Here you can add your code to handle the form submission, e.g., sending data to a server
+    
+    
 });
 
 function validateEmail(email) {

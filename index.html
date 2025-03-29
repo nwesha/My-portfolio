@@ -101,13 +101,18 @@
     <!-- Contact Form -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+        <form id="contactForm" 
+        action="https://formspree.io/f/xwplnbnj"
+        method="POST">
+            <label for="name">Name:
+                <input type="text" id="name" name="name" required>
+            </label>
+            <label for="email">Email:
+                <input type="email" id="email" name="email" required>
+            </label>
+            <label for="message">Message:
+                <textarea id="message" name="message" required></textarea>
+            </label>
             <button type="submit">Submit</button>
         </form>
     </section>
